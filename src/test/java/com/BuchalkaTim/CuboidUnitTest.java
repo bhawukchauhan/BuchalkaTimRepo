@@ -39,6 +39,7 @@ public class CuboidUnitTest {
   @Test
   public void f2() {
 	  SoftAssert softassert = new SoftAssert();
+	  
 	  /*
 	  Rectangle rectangle = new Rectangle(5, 10);
 	  System.out.println("rectangle.width= " + rectangle.getWidth());
