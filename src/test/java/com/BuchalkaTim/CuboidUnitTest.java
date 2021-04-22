@@ -7,6 +7,7 @@ public class CuboidUnitTest {
 
   @Test
   public void f1() {
+	  System.out.println("in test method f1");
 	  SoftAssert softassert = new SoftAssert();
 	  System.out.println("This is method f1");
 	  Rectangle rectangle = new Rectangle(5, 10);
