@@ -27,7 +27,8 @@ public class ListenerTestNg implements ITestListener{
 
 	@Override
 	public void onTestSkipped(ITestResult result) {
-		System.out.println("onTestSkipped");
+		//System.out.println("onTestSkipped");
+		System.out.println("onTestSkipped overwrite");
 	}
 
 	@Override
