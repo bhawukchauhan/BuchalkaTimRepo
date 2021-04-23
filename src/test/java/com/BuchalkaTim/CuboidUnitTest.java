@@ -1,8 +1,10 @@
 package com.BuchalkaTim;
 
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
+@Listeners(testListeners.ListenerTestNg.class)	
 public class CuboidUnitTest {	
 
   @Test
@@ -10,6 +12,7 @@ public class CuboidUnitTest {
 	  System.out.println("in test method f1");
 	  SoftAssert softassert = new SoftAssert();
 	  System.out.println("This is method f1");
+	  
 	  Rectangle rectangle = new Rectangle(5, 10);
 	  System.out.println("rectangle.width= " + rectangle.getWidth());
 	  //Assert.assertEquals(rectangle.getWidth(), 5.0);
@@ -34,7 +37,15 @@ public class CuboidUnitTest {
 	  System.out.println("cuboid.volume= " + cuboid.getVolume());
 	  softassert.assertEquals(cuboid.getVolume(), 250.0, 0.0, "cuboid.volume= ");
 	  */
+	  try {
 	  softassert.assertAll();
+	  }
+	  catch(Exception e) {
+		  System.out.println("Printing excpetion ###################################");
+		  System.out.println(e.getMessage());
+		  e.printStackTrace();
+	  }
+	  softassert = null;
   }
   
   @Test
