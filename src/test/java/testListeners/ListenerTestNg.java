@@ -27,8 +27,7 @@ public class ListenerTestNg implements ITestListener{
 
 	@Override
 	public void onTestSkipped(ITestResult result) {
-		// TODO Auto-generated method stub
-		
+		System.out.println("onTestSkipped");
 	}
 
 	@Override
