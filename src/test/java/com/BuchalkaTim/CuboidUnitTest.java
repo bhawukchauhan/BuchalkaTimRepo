@@ -14,6 +14,7 @@ public class CuboidUnitTest {
 	  System.out.println("This is method f1");
 	  
 	  Rectangle rectangle = new Rectangle(5, 10);
+	  //var rectangle = new Rectangle(5, 10);
 	  System.out.println("rectangle.width= " + rectangle.getWidth());
 	  //Assert.assertEquals(rectangle.getWidth(), 5.0);
       //Assert.assertEquals("rectangle.width= ", rectangle.getWidth(), 6.0, 0.0);
