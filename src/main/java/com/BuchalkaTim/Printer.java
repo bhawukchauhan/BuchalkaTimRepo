@@ -31,7 +31,8 @@ public Printer(int tonerLevel, boolean duplex) {
 
 	public int printPages(int pages) {
 		int pagesToPrint = pages;
-		if (this.duplex == true) {
+		//if (this.duplex == true) {
+		if (this.duplex) { //implicitly comparison is done to true if boolean
 			System.out.println("Printing in duplex mode");
 			pagesToPrint = (pagesToPrint / 2) + (pagesToPrint % 2);
 		}

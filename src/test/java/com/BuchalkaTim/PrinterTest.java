@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 public class PrinterTest {
 	@Test
 	public void f() {
-		Printer printer = new Printer(50, true);
+		Printer printer = new Printer(50, false);
 		System.out.println(printer.addToner(50));
 		System.out.println("initial page count = " + printer.getPagesPrinted());
 		int pagesPrinted = printer.printPages(4);
