@@ -8,7 +8,7 @@ private String healthyExtra2Name;
 private double healthyExtra2Price;
 
 public HealthyBurger(String meat, double price) {
-	super("Healthy hamburger", meat, price, "Brown rye roll");
+	super("Healthy", meat, price, "Brown rye");
 }
 
 public void addHealthyAddition1(String healthyExtra1Name, double healthyExtra1Price) {

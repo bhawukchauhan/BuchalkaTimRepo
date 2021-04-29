@@ -50,7 +50,8 @@ public void addHamburgerAddition4(String addition4Name, double addition4Price) {
 }
 
 public double itemizeHamburger() {	
-	return addition1Price + addition2Price + addition3Price + addition4Price + price;	
+	//return addition1Price + addition2Price + addition3Price + addition4Price + price;	
+	return Math.round((addition1Price + addition2Price + addition3Price + addition4Price + price)*100.00)/100.00;	
 }
 
 }

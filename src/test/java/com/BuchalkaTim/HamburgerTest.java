@@ -1,5 +1,7 @@
 package com.BuchalkaTim;
 
+import java.util.Arrays;
+
 import org.testng.annotations.Test;
 
 public class HamburgerTest {
@@ -20,6 +22,19 @@ public class HamburgerTest {
 	  db.addHamburgerAddition3("Should not do this", 50.53);
 	  System.out.println("Total Deluxe Burger price is " + db.itemizeHamburger());
 	  System.out.println("Total Deluxe Burger price is " + String.format("%.2f", db.itemizeHamburger()));
+	  
+	 int[] varInt = {20,10};
+	 Hamburger[] arrHamburger = {new Hamburger("Basic", "Sausage", 3.56, "White"),
+			 					new Hamburger("modified", "Sausage & bacon", 10.55, "Crispy")};
+	 
+	 for(Hamburger i :arrHamburger)
+	 {
+		  i.addHamburgerAddition1("Tomato", 0.27);
+		  i.addHamburgerAddition2("Lettuce", 0.75);
+		  i.addHamburgerAddition3("Cheese", 1.13);
+		 System.out.println("Total Burger price is " + i.itemizeHamburger()); 
+		 System.out.println("Total Burger price is " + String.format("%.2f", i.itemizeHamburger())); 
+	 }
 	  
   }
 }
