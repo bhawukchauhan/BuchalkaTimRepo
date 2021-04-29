@@ -14,7 +14,7 @@ public class HamburgerTest {
 	  System.out.println("Total Burger price is " + hamburger.itemizeHamburger());
 
 	  HealthyBurger healthyBurger = new HealthyBurger("Bacon", 5.67);
-	  healthyBurger.addHamburgerAddition1("Egg", 5.43);
+	  healthyBurger.addHamburgerAddition1("Chicken", 5.43);
 	  healthyBurger.addHealthyAddition1("Lentils", 3.41);
 	  System.out.println("Total Healthy Burger price is  " + healthyBurger.itemizeHamburger());
 
