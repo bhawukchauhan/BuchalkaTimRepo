@@ -41,5 +41,32 @@ public class SortArrayTest {
 		//int[] sortedArray = sortObj.sortingOfArray(arr);
 		System.out.println(Arrays.toString(sortObj.sortingOfArray(arr)));
 	}
+	
+	@Test
+	public void fnArrayTest() {
+		
+		//arrays are pass by reference types
+		//when you copy a array into another array, both array point to same object/memory reference
+		//there is only one copy of the array and both references are pointing to the same object in memory
+		//if you update one array, copied array would also reflect that change
+		//if you pass this array to some fn which accepts int array as parameter, another reference would be created pointing to the same array values
+		int[] arr = {10,20,40,60,80,120};
+		System.out.println("arr : " + Arrays.toString(arr)); //arr : [10, 20, 40, 60, 80, 120]
+		int[] arr2 = arr;
+		System.out.println("arr2 : " + Arrays.toString(arr2));//arr2 : [10, 20, 40, 60, 80, 120]
+		
+		for (int i = 0; i < arr.length; i++) {
+			arr[i] = arr[i] + 2;
+		}
+		System.out.println("arr : " + Arrays.toString(arr));//arr : [12, 22, 42, 62, 82, 122]
+		System.out.println("arr2 : " + Arrays.toString(arr2));//arr2 : [12, 22, 42, 62, 82, 122]
+		
+		//if we use a new keyword now, it would dereference arr2 older reference to arr and make it point to the new memory which stores different data
+		arr2 = new int[] {80,90};
+		System.out.println("arr : " + Arrays.toString(arr));//arr : [12, 22, 42, 62, 82, 122]
+		System.out.println("arr2 : " + Arrays.toString(arr2));//arr2 : [80, 90]
+		
+		
+	}
 
 }
