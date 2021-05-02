@@ -9,6 +9,7 @@ public class SortArrayTest {
 	public void f() {
 		int[] arr = { 106, 26, 81, 5, 15, 30, 35, 23, 70 };
 		System.out.println("array : " + Arrays.toString(arr));
+		System.out.println("printing array : " + Arrays.toString(arr));
 
 		for (int j = 0; j <= arr.length - 1; j++) {
 			boolean allSorted = true;
