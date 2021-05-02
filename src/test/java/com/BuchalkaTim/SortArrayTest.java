@@ -50,7 +50,7 @@ public class SortArrayTest {
 		//there is only one copy of the array and both references are pointing to the same object in memory
 		//if you update one array, copied array would also reflect that change
 		//if you pass this array to some fn which accepts int array as parameter, another reference would be created pointing to the same array values
-		int[] arr = {10,20,40,60,80,120};
+		int[] arr = {10, 20, 40, 60, 80, 120};
 		System.out.println("arr : " + Arrays.toString(arr)); //arr : [10, 20, 40, 60, 80, 120]
 		int[] arr2 = arr;
 		System.out.println("arr2 : " + Arrays.toString(arr2));//arr2 : [10, 20, 40, 60, 80, 120]
@@ -67,6 +67,60 @@ public class SortArrayTest {
 		System.out.println("arr2 : " + Arrays.toString(arr2));//arr2 : [80, 90]
 		
 		
+		int[] arrTrySort = {106, 26, 81, 5, 15, 30, 35, 23, 70 };
+		System.out.println("arrTrySort : " + Arrays.toString(arrTrySort));
+		Arrays.sort(arrTrySort);
+		System.out.println("arrTrySort : " + Arrays.toString(arrTrySort));
+		System.out.println("smallest element in arrTrySort : " + arrTrySort[0]);
+		int[] arrTrySort2 = {106, 26, 82, 5, 15, 30, 35, 70 };
+		System.out.println("arr mismatch : " + Arrays.mismatch(arrTrySort, arrTrySort2));
+		
+		String[] arrStrVal = {"Ram","Bam","RBC","RBA","Khalid","kshama"};
+		System.out.println("arrStrVal : " + Arrays.toString(arrStrVal));
+		Arrays.sort(arrStrVal);
+		System.out.println("sorted arrStrVal : " + Arrays.toString(arrStrVal));
+		
+		char[] arrCharVal = {'R','B','R','b','w','W'};
+		System.out.println("arrStrVal : " + Arrays.toString(arrCharVal));
+		Arrays.sort(arrCharVal);
+		System.out.println("sorted arrStrVal : " + Arrays.toString(arrCharVal));
+		
+	}
+	
+	@Test
+	public void ReverseArray() {
+		int[] arr = {106, 26, 81, 5, 15, 30, 35, 23, 70 };
+		System.out.println("arr : " + Arrays.toString(arr));
+		int[] arrReversed = new int[arr.length];
+		System.out.println("arrReversed : " + Arrays.toString(arrReversed));
+		int j=0;
+		for(int i= (arr.length-1) ; i>=0 ; i--) {
+			arrReversed[j] = arr[i];
+			j++;
+		}
+		System.out.println("reversed arr : " + Arrays.toString(arrReversed));
+	}
+	
+	@Test
+	public void ReverseArrayWithoutAnotherArray() {
+		int[] arr = {106, 26, 81, 5, 15, 30, 35, 23, 70 };
+		System.out.println("arr : " + Arrays.toString(arr));
+		int j=0;
+		int temp = 0;
+		for(int i= (arr.length-1) ; i>=(arr.length-1)/2 ; i--) {
+			temp = arr[j];
+			arr[j] = arr[i];
+			arr[i] = temp;
+			j++;
+		}
+		System.out.println("reversed arr : " + Arrays.toString(arr));
+		
+		for(int i= 0 ; i<=(arr.length-1)/2 ; i++) {
+			temp = arr[(arr.length-1) - i];
+			arr[(arr.length-1) - i] = arr[i];
+			arr[i] = temp;
+		}
+		System.out.println("reversed arr : " + Arrays.toString(arr));
 	}
 
 }
