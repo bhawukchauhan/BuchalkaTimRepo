@@ -123,5 +123,20 @@ public class SortArrayTest {
 		}
 		System.out.println("reversed arr : " + Arrays.toString(arr));
 	}
+	
+	@Test
+	public void IncreaseArraySize() {
+		int[] arr = {106, 26, 81, 5, 15, 30, 35, 23, 70 };
+		System.out.println("arr length : " + arr.length);//arr length : 9		
+		System.out.println("arr : " + Arrays.toString(arr));
+		//arr : [106, 26, 81, 5, 15, 30, 35, 23, 70]
+
+		arr = Arrays.copyOf(arr, 20);
+		System.out.println("arr length : " + arr.length);//arr length : 20
+		System.out.println("arr : " + Arrays.toString(arr));
+		//arr : [106, 26, 81, 5, 15, 30, 35, 23, 70, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+		
+
+	}
 
 }
