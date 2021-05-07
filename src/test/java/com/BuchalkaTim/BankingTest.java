@@ -1,5 +1,10 @@
 package com.BuchalkaTim;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
+
 import org.testng.annotations.Test;
 
 import Banking.Bank;
@@ -43,6 +48,8 @@ public class BankingTest {
 		bank.addCustomerToBranch("Front", "Jackson", 2000.50);
 		bank.addCustomerToBranch("Yonge", "Justin", 3000.50);
 		bank.addCustomerTransaction("Front", "Jackson", 6000.50);
+		bank.addCustomerTransaction("Front", "Jackson", -600.50);
+		bank.addCustomerTransaction("Front", "Jackson", 750.50);
 		bank.addCustomerTransaction("Yonge", "Jackson", 6000.50);
 		bank.addCustomerTransaction("Yonge", "Justin", 200.50);
 		bank.addCustomerTransaction("Front", "Jackson", 220.50);

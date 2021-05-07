@@ -10,7 +10,8 @@ public class Customer {
 	public Customer(String strCustomerName, Double dblInitialTransactionAmount) {
 		this.strCustomerName = (strCustomerName != null && !strCustomerName.isBlank()) ? strCustomerName : "John"; 
 		//this.arrListTransactions.add(dblInitialTransactionAmount >= 0 ? dblInitialTransactionAmount : 0);
-		this.arrListTransactions.add(dblInitialTransactionAmount != null ? dblInitialTransactionAmount : 0);
+		//this.arrListTransactions.add(dblInitialTransactionAmount != null ? dblInitialTransactionAmount : 0);
+		addTransaction(dblInitialTransactionAmount);
 	}
 
 	public void addTransaction(Double customerTransaction) {
