@@ -8,7 +8,6 @@ private double duration;
 public Song(String title, double duration) {
 	String songName = title;
 	if (songName != null && songName.isBlank() != true) {
-		//System.out.println("Valid song name : " + songName);
 			if (duration> 0) {
 				this.title = title;
 				this.duration = duration;
@@ -19,6 +18,11 @@ public Song(String title, double duration) {
 		System.out.println("Invalid song name");
 	}
 
+}
+
+@Override
+public String toString() {
+	return "Song title=" + title + ", duration=" + String.format("%.2f", duration);
 }
 
 public String getTitle() {
