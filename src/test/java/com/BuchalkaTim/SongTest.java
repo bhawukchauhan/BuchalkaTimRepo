@@ -3,6 +3,7 @@ package com.BuchalkaTim;
 import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.ListIterator;
 
 import org.testng.annotations.Test;
 
@@ -83,9 +84,36 @@ public class SongTest {
 		  i.showAlbumSongs();
 	  }
 	  
-	  pList.addToPlayList("song");
+	  pList.showPlayList();
+	  pList.addToPlayList("song12");
 	  pList.addToPlayList("High ball shooter");
 	  pList.addToPlayList("Snowballed");
+	  pList.addToPlayList("The gypsy");
+	  pList.addToPlayList("I put the finger on you");
+	  pList.addToPlayList("Lady double dealer");
+	  pList.addToPlayList("Evil walks");
+	  pList.showPlayList();
+	  //pList.menuPlayList();
+	  
+		ListIterator<Song> listIterator = pList.getPlayList().listIterator();
+		if (listIterator.hasNext())
+			System.out.println(listIterator.next());
+		System.out.println(listIterator.next());
+		System.out.println(listIterator.next());
+		System.out.println(listIterator.next());
+		listIterator.previous();
+		if (listIterator.hasPrevious())
+			System.out.println(listIterator.previous());
+		listIterator.next();
+		System.out.println(listIterator.next());
+		if (listIterator.hasNext())
+			System.out.println(listIterator.next());
+		if (listIterator.hasNext())
+			System.out.println(listIterator.next());
+		if (listIterator.hasNext())
+			System.out.println(listIterator.next());
+		if (listIterator.hasNext())
+			System.out.println(listIterator.next());
 	  
 	  
   }
