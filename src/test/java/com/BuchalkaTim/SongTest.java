@@ -93,8 +93,8 @@ public class SongTest {
 	  pList.addToPlayList("Lady double dealer");
 	  pList.addToPlayList("Evil walks");
 	  pList.showPlayList();
-	  //pList.menuPlayList();
-	  
+	  pList.menuPlayList();
+	  /*
 		ListIterator<Song> listIterator = pList.getPlayList().listIterator();
 		if (listIterator.hasNext())
 			System.out.println(listIterator.next());
@@ -114,6 +114,7 @@ public class SongTest {
 			System.out.println(listIterator.next());
 		if (listIterator.hasNext())
 			System.out.println(listIterator.next());
+			*/
 	  
 	  
   }

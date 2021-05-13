@@ -68,6 +68,7 @@ public class SongsPlayList {
 		boolean quit = false;
 		
 		ListIterator<Song> listIterator = playList.listIterator();
+		String traverseDirection = "forward";
 		//listIterator.next();
 		//listIterator.previous();
 		
@@ -87,12 +88,30 @@ public class SongsPlayList {
 				break;
 			case 2:
 				System.out.println("Skip forward to the next song\n");
+				if (listIterator.hasNext()) {
+					if(traverseDirection.equalsIgnoreCase("back"))
+						listIterator.next();
+					System.out.println(listIterator.next().toString());
+					traverseDirection = "forward";
+				}
+				else
+					System.out.println("At the last song, can't go to the next song in the playlist");
 				break;
 			case 3:
 				System.out.println("Skip backwards to the previous song\n");
+				if (listIterator.hasPrevious()) {
+					if(traverseDirection.equalsIgnoreCase("forward"))
+						listIterator.previous();
+					System.out.println(listIterator.previous().toString());
+					traverseDirection = "back";
+				}
+				else
+					System.out.println("Can't go back than first song in the playlist");
 				break;
 			case 4:
 				System.out.println("Replay the current song\n");
+				if(listIterator.hasPrevious())
+					System.out.println(playList.get(listIterator.previousIndex()).toString());
 				break;
 			default:
 				System.out.println("Invalid option, try again");

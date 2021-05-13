@@ -46,7 +46,7 @@ public class Album {
 				matchFoundAtIndex = this.songList.indexOf(sg);
 				break;
 			}
-		}
+		} 
 		return matchFoundAtIndex;
 	}
 
