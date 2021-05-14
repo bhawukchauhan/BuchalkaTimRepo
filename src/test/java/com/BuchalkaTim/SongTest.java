@@ -106,7 +106,8 @@ public class SongTest {
 			System.out.println(listIterator.previous());
 		listIterator.next();
 		System.out.println(listIterator.next());
-		if (listIterator.hasNext())
+		if (listIterator.hasNext())1
+		
 			System.out.println(listIterator.next());
 		if (listIterator.hasNext())
 			System.out.println(listIterator.next());

@@ -66,13 +66,12 @@ public class SongsPlayList {
 		Scanner scanner = new Scanner(System.in);
 		int option;
 		boolean quit = false;
-		
+
 		ListIterator<Song> listIterator = playList.listIterator();
 		String traverseDirection = "forward";
-		//listIterator.next();
-		//listIterator.previous();
-		
-		
+		// listIterator.next();
+		// listIterator.previous();
+
 		displayMenuOptions();
 		while (!quit) {
 			option = scanner.nextInt();
@@ -89,29 +88,47 @@ public class SongsPlayList {
 			case 2:
 				System.out.println("Skip forward to the next song\n");
 				if (listIterator.hasNext()) {
-					if(traverseDirection.equalsIgnoreCase("back"))
+					if (traverseDirection.equalsIgnoreCase("back"))
 						listIterator.next();
 					System.out.println(listIterator.next().toString());
 					traverseDirection = "forward";
-				}
-				else
+				} else
 					System.out.println("At the last song, can't go to the next song in the playlist");
 				break;
 			case 3:
 				System.out.println("Skip backwards to the previous song\n");
 				if (listIterator.hasPrevious()) {
-					if(traverseDirection.equalsIgnoreCase("forward"))
+					if (traverseDirection.equalsIgnoreCase("forward"))
 						listIterator.previous();
 					System.out.println(listIterator.previous().toString());
 					traverseDirection = "back";
-				}
-				else
+				} else
 					System.out.println("Can't go back than first song in the playlist");
 				break;
 			case 4:
 				System.out.println("Replay the current song\n");
-				if(listIterator.hasPrevious())
-					System.out.println(playList.get(listIterator.previousIndex()).toString());
+				if (traverseDirection.equalsIgnoreCase("forward"))
+					if (listIterator.hasPrevious())
+						System.out.println(playList.get(listIterator.previousIndex()).toString());
+				if (traverseDirection.equalsIgnoreCase("back"))
+					if (listIterator.hasNext())
+						System.out.println(playList.get(listIterator.nextIndex()).toString());
+				break;
+			case 5:
+				showPlayList();	
+				break;
+			case 6:
+				System.out.println("Removing the current song from the playlist\n");
+				listIterator.remove();
+				if (traverseDirection.equalsIgnoreCase("forward")) {					
+					//playList.remove(listIterator.previousIndex());
+						if (listIterator.hasNext())
+							System.out.println(listIterator.next().toString());
+				} else if (traverseDirection.equalsIgnoreCase("back")) {
+					//playList.remove(listIterator.nextIndex());
+					if (listIterator.hasPrevious())
+						System.out.println(listIterator.previous().toString());						
+				}
 				break;
 			default:
 				System.out.println("Invalid option, try again");
@@ -126,6 +143,8 @@ public class SongsPlayList {
 				           "1 - Display menu options\n" +
 		                   "2 - Skip forward to the next song\n"+
 		                   "3 - Skip backwards to the previous song\n"+
-		                   "4 - Replay the current song\n");
+		                   "4 - Replay the current song\n"+
+		                   "5 - Show playlist\n"+
+		                   "6 - Remove the current song\n");
 	}
 }
