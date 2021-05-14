@@ -1,7 +1,12 @@
 package com.BuchalkaTim;
 
 import java.sql.Time;
+import java.text.Format;
+import java.text.SimpleDateFormat;
+import java.time.LocalTime;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
@@ -44,5 +49,26 @@ public class LinkedListTest {
 		System.out.println(bList.toString());
 		System.out.println("Gladstone exists in the list - " + aList.containsAll(bList));
 		
+	      // displaying current date and time
+	      Calendar cal = Calendar.getInstance();
+	      SimpleDateFormat simpleformat = new SimpleDateFormat("dd/MMMM/yyyy hh:mm:s");
+	      System.out.println("Today's date = "+simpleformat.format(cal.getTime()));
+	      // current time
+	      Format f = new SimpleDateFormat("HH:mm:ss");
+	      String strResult = f.format(new Date());
+	      System.out.println("Time = "+strResult);
+	      
+	      LocalTime timeVar = LocalTime.parse("06:30");
+	      LocalTime timeVar2 = LocalTime.parse("02:30");
+	      System.out.println(timeVar);
+	      System.out.println(timeVar2);
+	      System.out.println(timeVar2.plusMinutes(40));
+	      
+	        Time sqlTime1 = Time.valueOf("18:45:20");
+	        System.out.println("SqlTime1: " + sqlTime1);
+	        
+	        Time sqlTime2 = Time.valueOf(LocalTime.of(8, 15, 20, 1000));
+	        System.out.println("SqlTime2: " + sqlTime2);
+	      
   }
 }
