@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class SongsPlayList {
 
 	private ArrayList<Album> albumsOwned;
-	PlayList pList = null;
+	private PlayList pList = null;
 	
 	public SongsPlayList() {
 		this.albumsOwned = new ArrayList<Album>();

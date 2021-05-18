@@ -27,6 +27,12 @@ public class LinkedListTest {
 		System.out.println(aList.size());
 		System.out.println(aList.toString());
 		*/
+	  
+	    List gList = null;//generic List variable which can be assigned to any type of List and any data type of list
+	    gList =new ArrayList<String>();
+	    gList =new ArrayList<Double>();
+	    gList =new LinkedList<Integer>();
+	    
 		List<String> aList = new LinkedList<String>();
 		aList.add("Front");
 		aList.add("Yonge");
