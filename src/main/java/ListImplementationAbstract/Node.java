@@ -8,27 +8,29 @@ public class Node extends ListItem{
 
 	@Override
 	protected ListItem next() {
-		return null;
+		return rightLink;
 	}
 
 	@Override
-	protected ListItem setNext(ListItem lItemRight) {
-		return lItemRight;
+	protected ListItem setNext(ListItem item) {
+		this.rightLink = item;
+		return this.rightLink;
 	}
 
 	@Override
 	protected ListItem previous() {
-		return null;
+		return leftLink;
 	}
 
 	@Override
-	protected ListItem setPrevious(ListItem lItemLeft) {
-		return lItemLeft;
+	protected ListItem setPrevious(ListItem item) {
+		this.leftLink = item; 
+		return this.leftLink;
 	}
 
 	@Override
 	protected int compareTo(ListItem lItem) {
-		return 0;	
+		return 0;
 	}
 
 }

@@ -1,8 +1,8 @@
 package ListImplementationAbstract;
 
 public abstract class ListItem {
-	protected ListItem rightLink;
-	protected ListItem leftLink;
+	protected ListItem rightLink = null;
+	protected ListItem leftLink = null;
 	protected Object value;
 
 	public ListItem(Object value) {
