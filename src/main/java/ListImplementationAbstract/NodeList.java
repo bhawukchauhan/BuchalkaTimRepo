@@ -1,8 +1,8 @@
 package ListImplementationAbstract;
 
 public interface NodeList {
-abstract ListItem getRoot();
-abstract boolean addItem(ListItem lItem);
-abstract boolean removeItem(ListItem lItem);
-abstract void traverse(ListItem root);
+ListItem getRoot();
+boolean addItem(ListItem item);
+boolean removeItem(ListItem item);
+void traverse(ListItem root);
 }
