@@ -80,4 +80,29 @@ public class FetchJson {
 		
 		return new String(Files.readAllBytes(Paths.get(path)));
 	}
+	
+	  public static String strJson1() {
+		  String s1 = "{\n"
+		  		+ "    \"employee\":\n"
+		  		+ "    {\n"
+		  		+ "        \"id\": \"1212\",\n"
+		  		+ "        \"fullName\": \"John Miles\",\n"
+		  		+ "        \"age\": 34\n"
+		  		+ "    }\n"
+		  		+ "}";
+		  return s1;
+		  
+	  }
+	  
+	  public static String strJson2() {
+		  String s2 = "{   \r\n"
+		  		+ "    \"employee\":\r\n"
+		  		+ "    {\r\n"
+		  		+ "        \"id\": \"1212\",\r\n"
+		  		+ "        \"age\": 34,\r\n"
+		  		+ "        \"fullName\": \"John Miles\"\r\n"
+		  		+ "    }\r\n"
+		  		+ "}";
+		  return s2;		  
+	  }
 }
