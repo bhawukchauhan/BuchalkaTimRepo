@@ -55,15 +55,22 @@ public class ArrayListSort {
   
   @Test
   public void fHashMap() {
-	  HashMap<String, Integer> l = new HashMap<String, Integer>();
-	  System.out.println(l.put("a", 1));
-	  System.out.println(l.put("b", 1));
-	  System.out.println(l.put("c", 1));
-	  System.out.println(l.put("a", 1));
-	  System.out.println("a value : " + (l.get("a") + 1));
-	  //(l.put("a", 1) == null) ? (l.get("a") + 1) : ( l.get("a"));
-	  System.out.println(l.put("a", 1));
-	  System.out.println(l.put("c", 1));
-	  System.out.println("Hash map : " + l);
+  String str = "this is a sentence which is a requirement to test another requirement for duplicate values which is used to check Collections knowledge";
+  String arr[] = str.split(" ");
+  HashMap<String, Integer> l = new HashMap<String, Integer>();
+  
+  for(String sVal : arr) {
+	  System.out.println(sVal);		  
+	  if(l.containsKey(sVal)) {
+		  //int iVal = l.get(sVal);
+	  //System.out.println("Value for " + sVal + " is : " + iVal);
+		  System.out.println(l.put(sVal, (l.get(sVal) + 1)));
+	  }
+	  else {
+		  System.out.println(l.put(sVal, 1));
+	  }
+  }
+
+  System.out.println("Hash map : " + l);
   }
 }
